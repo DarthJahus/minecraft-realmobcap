@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "realmobcap",
+  "version": "${version}",
+  "name": "Real Mobcap",
+  "description": "Simple server-side mobcap and despawn control via JSON. Patches MobCategory so the spawn engine, Carpet, and commands all see the real values.",
+  "authors": ["DarthJahus"],
+  "contact": {},
+  "license": "MIT",
+  "environment": "server",
+  "entrypoints": {
+    "main": ["net.jahus.realmobcap.RealMobcap"]
+  },
+  "mixins": ["realmobcap.mixins.json"],
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "~26.3"
+  }
+}
