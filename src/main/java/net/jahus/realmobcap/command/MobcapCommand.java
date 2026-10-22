@@ -11,7 +11,7 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.level.NaturalSpawner;
 
 public final class MobcapCommand {
-    private static final int MAGIC = 17;
+    private static final int MAGIC = 289;  // 17^2
 
     private MobcapCommand() {}
 
