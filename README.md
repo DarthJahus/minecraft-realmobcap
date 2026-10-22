@@ -2,10 +2,13 @@
 
 Simple **server-side** mobcap control for Minecraft (Fabric).
 
+[![Modrinth](https://img.shields.io/modrinth/dt/jahus-realmobcap?logo=modrinth&label=Modrinth)](https://modrinth.com/datapack/jahus-realmobcap)
+[![CurseForge](https://img.shields.io/curseforge/dt/1760116?logo=curseforge&label=CurseForge)](https://www.curseforge.com/projects/1760116)
+
 Patches `MobCategory` so the spawn engine, Carpet, and the built-in command all see the same values.  
 JSON config only; no Cloth, no ModMenu, no Fabric API.
 
-Inspired by the idea behind [Proper Mobcap Modifier](https://github.com/vlad2305m/Proper-Mobcap-Modifier-Fabric) (getter overrides for spawn groups), reimplemented for 26.3 with field patching and a diagnostic command (inspired by Cloth).
+Inspired by the idea behind [Proper Mobcap Modifier](https://github.com/vlad2305m/Proper-Mobcap-Modifier-Fabric) (getter overrides for spawn groups), reimplemented for 26.3 with field patching and a diagnostic command (inspired by Carpet).
 
 ## Config
 `config/realmobcap.json` (written on first run with vanilla defaults)
