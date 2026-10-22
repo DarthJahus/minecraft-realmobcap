@@ -59,7 +59,7 @@ public final class MobcapCommand {
             String countStr = count < 0 ? "n/a" : Integer.toString(count);
 
             String line = String.format(
-                    "  %s: %s / %s  (perChunk=%d, friendly=%s, persistent=%s, despawn=%d/%d)",
+                    "  %s: %s / %s  (C=%d, f=%s, p=%s, d=%d/%d)",
                     cat.getName(),
                     countStr,
                     effective,
@@ -75,7 +75,7 @@ public final class MobcapCommand {
 
         if (state == null) {
             source.sendSuccess(() -> Component.literal(
-                    "  (no SpawnState yet — wait a few ticks or move around)"
+                    "  (no SpawnState yet. Wait a few ticks or move around)"
             ), false);
         }
 
