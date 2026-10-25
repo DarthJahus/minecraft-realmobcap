@@ -6,8 +6,8 @@
   "description": "Simple server-side mobcap and despawn control via JSON. Patches MobCategory so the spawn engine, Carpet, and commands all see the real values.",
   "authors": ["DarthJahus"],
   "contact": {},
-  "license": "MIT",
-  "environment": "server",
+  "license": "Apache-2.0",
+  "environment": "*",
   "entrypoints": {
     "main": ["net.jahus.realmobcap.RealMobcap"]
   },
