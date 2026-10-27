@@ -1,19 +1,28 @@
 package net.jahus.realmobcap;
 
-import net.fabricmc.api.ModInitializer;
+import com.mojang.logging.LogUtils;
+import net.jahus.realmobcap.command.MobcapCommand;
 import net.jahus.realmobcap.config.CategoryPatcher;
 import net.jahus.realmobcap.config.ModConfig;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.RegisterCommandsEvent;
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
-public class RealMobcap implements ModInitializer {
+@Mod(RealMobcap.MOD_ID)
+public class RealMobcap {
     public static final String MOD_ID = "realmobcap";
-    public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+    public static final Logger LOGGER = LogUtils.getLogger();
 
-    @Override
-    public void onInitialize() {
+    public RealMobcap(IEventBus modEventBus) {
         ModConfig.load();
         CategoryPatcher.apply();
+        NeoForge.EVENT_BUS.addListener(RealMobcap::onRegisterCommands);
         LOGGER.info("Real Mobcap loaded (enabled={})", ModConfig.isEnabled());
+    }
+
+    private static void onRegisterCommands(RegisterCommandsEvent event) {
+        MobcapCommand.register(event.getDispatcher());
     }
 }

@@ -2,8 +2,8 @@ package net.jahus.realmobcap.config;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import net.fabricmc.loader.api.FabricLoader;
 import net.jahus.realmobcap.RealMobcap;
+import net.neoforged.fml.loading.FMLPaths;
 
 import java.io.IOException;
 import java.io.Reader;
@@ -15,7 +15,7 @@ import java.util.Map;
 
 public final class ModConfig {
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().disableHtmlEscaping().create();
-    private static final Path PATH = FabricLoader.getInstance().getConfigDir().resolve("realmobcap.json");
+    private static final Path PATH = FMLPaths.CONFIGDIR.get().resolve("realmobcap.json");
 
     private static Data data = Data.defaults();
 
