@@ -1,8 +1,11 @@
 pluginManagement {
     repositories {
-        maven { url = "https://maven.fabricmc.net/" }
+        maven { url = 'https://maven.minecraftforge.net/' }
         gradlePluginPortal()
         mavenCentral()
     }
 }
-rootProject.name = "realmobcap"
+plugins {
+    id 'org.gradle.toolchains.foojay-resolver-convention' version '1.0.0'
+}
+rootProject.name = 'realmobcap'
